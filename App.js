@@ -9,6 +9,7 @@ import {
 } from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { FontAwesome5 } from "@expo/vector-icons";
+import { Ionicons } from "@expo/vector-icons";
 
 export default function App() {
   return (
@@ -28,10 +29,33 @@ export default function App() {
           <FontAwesome5 name="search" size={35} color="red" />
         </View>
 
-      <Text style={styles.FoodText}>Select Food</Text>
+        <Text style={styles.FoodText}>Select Food</Text>
 
-      <View style={styles.IconsBos}></View>
+        <View style={styles.IconsBos}>
+          <View style={styles.IconBoxborder}>
+            <Ionicons name="fast-food-outline" size={40} color="black" />
+            <Text style={styles.miniheading}>Fastfood</Text>
+          </View>
 
+          <View style={styles.IconBoxborder}>
+            <FontAwesome5 name="ice-cream" size={40} color="black" />
+            <Text style={styles.miniheading}>Ice-Creams</Text>
+          </View>
+
+          <View style={styles.IconBoxborder}>
+            <FontAwesome5 name="pizza-slice" size={40} color="black" />
+            <Text style={styles.miniheading}>Pizza</Text>
+          </View>
+
+          <View style={styles.IconBoxborder}>
+            <MaterialCommunityIcons
+              name="food-drumstick"
+              size={40}
+              color="black"
+            />
+            <Text style={styles.miniheading}>Non-Veg</Text>
+          </View>
+        </View>
       </ScrollView>
 
       <StatusBar style="auto" />
@@ -79,16 +103,30 @@ const styles = StyleSheet.create({
 
   FoodText: {
     fontSize: 25,
-    fontWeight: 'bold',
+    fontWeight: "bold",
     marginLeft: 10,
     marginTop: 15,
     marginBottom: 15,
   },
 
   IconsBos: {
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-    width: '100%',
+    flexDirection: "row",
+    justifyContent: "space-around",
+    width: "100%",
+    flexWrap: "wrap",
   },
 
+  IconBoxborder: {
+    padding: 15,
+    borderRadius: 15,
+    backgroundColor: "#fff",
+    flexDirection: "column",
+    alignItems: "center",
+    marginTop: 15,
+  },
+
+  miniheading: {
+    fontWeight: "bold",
+    marginTop: 5,
+  },
 });
