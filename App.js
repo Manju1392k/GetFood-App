@@ -111,7 +111,24 @@ export default function App() {
             style={styles.inputSignup}
           />
 
-          <Text style={styles.Buttons}>Submit</Text>
+          <Text style={styles.Buttons}>SignUp</Text>
+        </View>
+
+        <Text style={styles.FoodTextTwo}>Login Here</Text>
+
+        <View style={styles.SignUpbox}>
+          <Text style={styles.SignHeading}>Eamil</Text>
+          <TextInput
+            placeholder="Enter Your Eamil"
+            style={styles.inputSignup}
+          />
+          <Text style={styles.SignHeading}>Password</Text>
+          <TextInput
+            placeholder="Enter Your Password"
+            style={styles.inputSignup}
+          />
+
+          <Text style={styles.Buttons}>Login</Text>
         </View>
       </ScrollView>
 
