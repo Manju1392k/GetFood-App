@@ -65,7 +65,6 @@ export default function App() {
             />
             <Text style={styles.Samllheading}>Briyani</Text>
           </View>
-
           <View>
             <Image
               source={require("./assets/foodTwo.jpg")}
@@ -73,7 +72,6 @@ export default function App() {
             />
             <Text style={styles.Samllheading}>Idly</Text>
           </View>
-
           <View>
             <Image
               source={require("./assets/foodFour.jpg")}
@@ -81,7 +79,6 @@ export default function App() {
             />
             <Text style={styles.SamllheadingFour}>French Fries</Text>
           </View>
-
           <View>
             <Image
               source={require("./assets/FoodThree.jpg")}
@@ -89,6 +86,32 @@ export default function App() {
             />
             <Text style={styles.Samllheading}>ColdCoffe</Text>
           </View>
+        </View>
+
+        <Text style={styles.FoodTextTwo}>SignUp Here</Text>
+
+        <View style={styles.SignUpbox}>
+          <Text style={styles.SignHeading}>Name</Text>
+          <TextInput placeholder="Enter Your Name" style={styles.inputSignup} />
+          <Text style={styles.SignHeading}>Eamil</Text>
+          <TextInput
+            placeholder="Enter Your Email"
+            style={styles.inputSignup}
+          />
+          <Text style={styles.SignHeading}>Password</Text>
+          <TextInput
+            placeholder="Enter Your Password"
+            style={styles.inputSignup}
+          />
+          <Text style={styles.SignHeading}>Address</Text>
+          <TextInput
+            placeholder="Enter Your Address"
+            multiline={true}
+            numberOfLines={4}
+            style={styles.inputSignup}
+          />
+
+          <Text style={styles.Buttons}>Submit</Text>
         </View>
       </ScrollView>
 
@@ -191,7 +214,7 @@ const styles = StyleSheet.create({
   },
 
   ImageFour: {
-    height: 380,
+    height: 375,
     width: 180,
     borderRadius: 15,
     bottom: 95,
@@ -204,5 +227,49 @@ const styles = StyleSheet.create({
   SamllheadingFour: {
     fontWeight: "bold",
     bottom: 95,
+  },
+
+  FoodTextTwo: {
+    bottom: 80,
+    fontSize: 25,
+    fontWeight: "bold",
+    marginLeft: 10,
+    marginBottom: 15,
+  },
+
+  SignUpbox: {
+    width: "100%",
+    flexDirection: "column",
+    justifyContent: "space-around",
+    bottom: 90,
+  },
+
+  inputSignup: {
+    width: "90%",
+    padding: 10,
+    paddingLeft: 20,
+    fontSize: 15,
+    borderRadius: 8,
+    backgroundColor: "#fff",
+    marginLeft: 20,
+    marginBottom: 10,
+  },
+
+  SignHeading: {
+    marginLeft: 20,
+    fontWeight: "bold",
+    fontSize: 17,
+    marginBottom: 2,
+  },
+
+  Buttons: {
+    backgroundColor: "red",
+    padding: 10,
+    width: 80,
+    marginLeft: 20,
+    borderRadius: 8,
+    textAlign: "center",
+    color: "white",
+    fontWeight: "bold",
   },
 });
