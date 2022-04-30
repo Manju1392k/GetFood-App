@@ -56,6 +56,40 @@ export default function App() {
             <Text style={styles.miniheading}>Non-Veg</Text>
           </View>
         </View>
+
+        <View style={styles.Imagebox}>
+          <View>
+            <Image
+              source={require("./assets/food.jpg")}
+              style={styles.ImageOne}
+            />
+            <Text style={styles.Samllheading}>Briyani</Text>
+          </View>
+
+          <View>
+            <Image
+              source={require("./assets/foodTwo.jpg")}
+              style={styles.ImageTwo}
+            />
+            <Text style={styles.Samllheading}>Idly</Text>
+          </View>
+
+          <View>
+            <Image
+              source={require("./assets/foodFour.jpg")}
+              style={styles.ImageFour}
+            />
+            <Text style={styles.SamllheadingFour}>French Fries</Text>
+          </View>
+
+          <View>
+            <Image
+              source={require("./assets/FoodThree.jpg")}
+              style={styles.ImageThree}
+            />
+            <Text style={styles.Samllheading}>ColdCoffe</Text>
+          </View>
+        </View>
       </ScrollView>
 
       <StatusBar style="auto" />
@@ -128,5 +162,47 @@ const styles = StyleSheet.create({
   miniheading: {
     fontWeight: "bold",
     marginTop: 5,
+  },
+
+  Imagebox: {
+    width: "100%",
+    flexDirection: "row",
+    justifyContent: "space-around",
+    marginTop: 20,
+    flexWrap: "wrap",
+  },
+
+  ImageOne: {
+    height: 250,
+    width: 180,
+    borderRadius: 15,
+  },
+
+  ImageTwo: {
+    height: 350,
+    width: 180,
+    borderRadius: 15,
+  },
+
+  ImageThree: {
+    height: 280,
+    width: 180,
+    borderRadius: 15,
+  },
+
+  ImageFour: {
+    height: 380,
+    width: 180,
+    borderRadius: 15,
+    bottom: 95,
+  },
+
+  Samllheading: {
+    fontWeight: "bold",
+  },
+
+  SamllheadingFour: {
+    fontWeight: "bold",
+    bottom: 95,
   },
 });
